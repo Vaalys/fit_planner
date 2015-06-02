@@ -2,12 +2,12 @@
   margin:0;
   padding:0;
   border:0;
-  box-sizing:border-box;
+  /*box-sizing: border-box;*/
   text-align: center;
 }
 html, body{
-  position:relative;
-  height:100%;
+  position: relative;
+  height: 100%;
   font-size: 20px;
 }
 body{
@@ -20,7 +20,15 @@ nav{
 }
 h1{
   font-weight: 100;
-  font-size: 3em;
+  font-size: 2.5em;
+  margin: 0 20px 10px 20px;
+  font-family: 'Aladin', cursive;
+  color: #E4E6DB;
+  display: inline-block;
+}
+.navbar-brand{
+  font-weight: 100;
+  font-size: 2.5em;
   margin: 0 20px 10px 20px;
   font-family: 'Aladin', cursive;
   color: #E4E6DB;
