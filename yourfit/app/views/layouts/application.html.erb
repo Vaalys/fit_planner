@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>yourfit</title>
+  <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <ul>
+    <h1><strong>your</strong>fit</h1>
+
+    <% if current_user %>
+      <%= link_to "sign out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "sign in", new_user_session_path, :method => :new %>
+    <% end %>
+
+
+    <% if current_user %>
+      <%= link_to "plan", '/users/current_user', :method => :get %>
+    <% else %>
+    <% end %>
+    </
+  </ul>
+  </nav>
+
+
+<%= yield %>
+
+</body>
+</html>
