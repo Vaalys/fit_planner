@@ -1,0 +1,38 @@
+<p>
+<%= form_for @profile do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br><br>
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+  <br><br>
+  <%= f.label :waist_size %>
+  <%= f.text_field :waist_size %>
+  <br><br>
+  <%= f.label :height %>
+  <%= f.text_field :height %>
+  <br><br>
+  <%= f.label :body_fat_p %>
+  <%= f.text_field :body_fat_p %>
+  <br><br>
+  <%= f.label :goal %>
+  <%= f.text_field :goal %>
+  <br><br>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <br><br>
+  <%= f.label :bmi %>
+  <%= f.text_field :bmi %>
+  <br><br>
+  <%= f.label :rep_max %>
+  <%= f.text_field :rep_max %>
+  <br><br>
+  <%= f.label :fastest_mile %>
+  <%= f.text_field :fastest_mile %>
+  <br><br>
+  <%= f.label :longest_run %>
+  <%= f.text_field :longest_run %>
+  <br><br>
+  <%= f.submit "Update" %>
+<% end %>
+</p>
