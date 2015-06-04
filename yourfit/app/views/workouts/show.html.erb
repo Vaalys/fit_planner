@@ -1,0 +1,26 @@
+<div class="col-lg-6">
+  <h2>Your Workout</h2>
+  <div class="table-responsive">
+      <table class="table table-bordered table-hover table-striped">
+          <thead>
+              <tr>
+                <!-- hardcode the table head -->
+                  <th>Page</th>
+                  <th>Visits</th>
+                  <th>% New Visits</th>
+                  <th>Revenue</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <!-- .each to make the table body -->
+                <% @workout.each do |w| %>
+                <tr>
+                  <td><%= w.id %></td>
+
+                </tr>
+                <% end %>
+          </tbody>
+      </table>
+  </div>
+</div>

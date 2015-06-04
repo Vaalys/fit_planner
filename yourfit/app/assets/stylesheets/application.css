@@ -34,12 +34,6 @@ h1{
   color: #E4E6DB;
   display: inline-block;
 }
-/*
-body{
-}
-nav{
-  margin: 0 auto;
-  padding: 0 auto;
-  background-color: #050262;
-}
-*/
+/*ul, menu, dir{
+  display: block;
+}*/

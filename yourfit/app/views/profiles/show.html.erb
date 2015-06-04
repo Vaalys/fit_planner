@@ -1,3 +1,29 @@
-<h2>Your Dashboard</h2>
+<h2>Your Dashboard!</h2>
 
 <p>Here will display your picture, status, and goals! Get to Ammie!</p>
+
+<p>
+  <img src="<%= @profile.image_url %>" class="img-rounded">
+    <br>
+  <%= @profile.name %>
+    <br>
+  Overall Goals: <%= @profile.goal %>
+    <br>
+  Weight: <%= @profile.weight %>
+    <br>
+  Waist Size:<%= @profile.waist_size %>
+    <br>
+  Height: <%= @profile.height %>
+    <br>
+  Body Fat Percentage: <%= @profile.body_fat_p %>
+    <br>
+  BMI: <%= @profile.bmi %>
+    <br>
+  Rep max: <%= @profile.rep_max %>
+    <br>
+  Fastest Mile: <%= @profile.fastest_mile %>
+    <br>
+  Longest Run: <%= @profile.longest_run %>
+</p>
+
+<a href="/users/<%= current_user.id %>/profiles/<%= current_user.id %>/edit">Update Profile</a>

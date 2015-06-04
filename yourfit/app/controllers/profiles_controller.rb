@@ -6,8 +6,6 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = current_user.create_profile!(profile_params)
-
-    redirect_to session[:previous_url] || root_url
   end
 
   def edit
@@ -23,6 +21,12 @@ class ProfilesController < ApplicationController
       flash[:error] = 'user was not updated'
     end
   end
+
+  def show
+    @profile = current_user.profile
+
+  end
+
 
   private
 
