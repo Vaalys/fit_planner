@@ -6,8 +6,11 @@ Rails.application.routes.draw do
     resources :profiles
   end
 
+
   root 'welcome#home'
 
+  get '/workouts', to: 'workouts#show'
+  resources :workouts
 
   # get '/', to: 'welcome#home'
 

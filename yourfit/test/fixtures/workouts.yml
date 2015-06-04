@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  description: MyText
+  set_count: MyString
+  reps: MyString
+  weight: MyString
+  notes: MyText
+
+two:
+  user_id: 1
+  description: MyText
+  set_count: MyString
+  reps: MyString
+  weight: MyString
+  notes: MyText
