@@ -25,6 +25,7 @@ body {
     padding: 0;
 }
 
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 225px;
@@ -32,6 +33,17 @@ body {
 
     #page-wrapper {
         padding: 10px;
+    }
+
+    /*media isn't working for #inspiration(quote) or .col-lg-6(table)*/
+    #inspiration{
+      float: none;
+      position: relative;
+    }
+    .col-lg-6{
+      left: 0;
+      right: 0;
+      width: 100%;
     }
 }
 
