@@ -9,8 +9,8 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
     @workout.user_id = current_user.id
-    @workout.save
-    binding.pry
+    @workout.save!
+    # binding.pry
     redirect_to("/workouts")
   end
 
@@ -27,13 +27,3 @@ class WorkoutsController < ApplicationController
   end
 
 end
-
-# hardcode some views
-  # nutrition table
-  # make a nav for Progress, with weight as a drop down menu and a line graph on that page
-# fix up workotus show table set up
-# validate css and html!
-# video cast
-# HW
-# Do I need a welcome_controller?
-# Edit routes, only what I need

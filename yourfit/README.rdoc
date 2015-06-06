@@ -1,1 +1,26 @@
-https://trello.com/b/SMb7hhkj/yourfit
+Hello! Welcome to Your Fit!
+
+User Stories: https://trello.com/b/SMb7hhkj/yourfit
+
+To get this app up and running on your localhost:
+
+On Github:
+
+* Fork this repo and clone to your local repo
+In the terminal:
+
+- bundle install
+
+- rake db:create
+
+- rake db:migrate
+
+- rake db:seed
+
+- rails s
+
+In your browser:
+
+* go to localhost:3000
+
+note: There is a bug that won't let a workout save unless you either go in and out of pry or change something in the code and save while the server is running.

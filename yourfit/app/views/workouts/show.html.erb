@@ -17,23 +17,24 @@
           </thead>
           <tbody>
                 <% @workouts.each do |work| %>
-                  <tr>
-                    <td>
-                      <%= work.id %>
-                      <br>
-                      <%= link_to ('<i class="glyphicon glyphicon-trash"></i>').html_safe, workout_path(work), :method=> :delete, :remote=> true %>
-                    </td>
-                    <td><%= work.description %></td>
-                    <td><%= work.set_count %></td>
-                    <td><%= work.reps %></td>
-                    <td><%= work.weight %></td>
-                    <td><%= work.notes %></td>
-                  </tr>
+                <tr>
+                  <td>
+                    <%= work.id %>
+                    <br>
+                    <%= link_to ('<i class="glyphicon glyphicon-trash"></i>').html_safe, workout_path(work), :method=> :delete, :remote=> true %>
+                  </td>
+                  <td><%= work.description %></td>
+                  <td><%= work.set_count %></td>
+                  <td><%= work.reps %></td>
+                  <td><%= work.weight %></td>
+                  <td><%= work.notes %></td>
+                </tr>
                 <% end %>
                 <tr>
                   <div class="col-lg-6">
                     <div class="input-group">
                       <%= form_for @workout, url: {action: "create"} do |f| %>
+                      <!-- why won't the added , :class => "btn btn-default" on the submit button work!?-->
                         <td><%= f.submit "Add", :class => "btn btn-default" %></td>
                         <td><%= f.text_field :description, :placeholder => "Description", :class => "form-control" %></td>
                         <td><%= f.text_field :set_count, :placeholder => "Set Count", :class => "form-control" %></td>

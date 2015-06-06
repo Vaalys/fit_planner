@@ -6,7 +6,6 @@
   <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-  <script src='js/bootstrap.js'></script>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -39,7 +38,7 @@
             <ul class="nav navbar-nav side-nav">
               <!-- if signed in, show full side bar menu, otherwise link to registration -->
               <% if current_user %>
-                  <li>
+                  </li>
                       <% if current_user %>
                       <a href="/users/<%= current_user.id %>/profiles/<%= current_user.id %>"><i class="glyphicon glyphicon-user"></i>
                         <%= current_user.email %>
@@ -48,17 +47,15 @@
                       <% end %>
                   </li>
                   <li>
-                    <!-- List all the templates etc that belong to current_user to show until they sign out -->
+                      <!-- List all the templates etc that belong to current_user to show until they sign out -->
                       <a href="" data-toggle="collapse" data-target="#train"><i class="fa fa-fw fa-bar-chart-o"></i> Train<i class="fa fa-fw fa-caret-down"></i></a>
                       <ul id="train" class="collapse">
                           <li>
                               <a href="/workouts">Workout 1</a>
                           </li>
-                          <li>
-                              <a href="">Running</a>
-                          </li>
                       </ul>
                   </li>
+                  <!-- The rest of these on the nav bar don't link to anywhere yet -->
                   <li>
                       <a href="javascript:;" data-toggle="collapse" data-target="#nutrition"><i class="glyphicon glyphicon-apple"></i> Nutrition <i class="fa fa-fw fa-caret-down"></i></a>
                       <ul id="nutrition" class="collapse">
@@ -81,14 +78,6 @@
                           </li>
                       </ul>
                   </li>
-
-                  <li>
-                      <a href=""><i class="fa fa-fw fa-edit"></i> More Stuff To</a>
-                  </li>
-
-                  <li>
-                      <a href=""><i class="fa fa-fw fa-wrench"></i> Make This Look Cool</a>
-                  </li>
                   <li>
                       <a href=""><i class="fa fa-fw fa-file"></i> Inspiration</a>
                   </li>
@@ -96,14 +85,13 @@
                       <a href=""><i class="glyphicon glyphicon-hourglass"></i> Timelines</a>
                   </li>
               <% else %>
-              <!-- When user is not signed in, show this -->
-              <!-- In the future, have more for side bar when not signed in... maybe the description of the website here -->
+                  <!-- When user is not signed in, show this -->
+                  <!-- In the future, have more for side bar when not signed in... like what? -->
                   <li>
                       <a href="/users/sign_up"><i class="fa fa-play-circle-o"></i> Start Planning!</a>
                   </li>
               <% end %>
-
-                <!-- Credits, add my Github, once you figure out how to stick it to the bottom of the nav you fool! -->
+                  <!-- Credits, add my Github, once you figure out how to stick it to the bottom of the nav you fool! -->
                   <p class="creds">
                     <i class="glyphicon glyphicon-copyright-mark"></i> 2015 Ammie Mcculloch
                   </p>
