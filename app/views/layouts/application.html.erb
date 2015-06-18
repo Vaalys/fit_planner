@@ -38,7 +38,7 @@
             <ul class="nav navbar-nav side-nav">
               <!-- if signed in, show full side bar menu, otherwise link to registration -->
               <% if current_user %>
-                  </li>
+                  <li>
                       <% if current_user %>
                       <a href="/users/<%= current_user.id %>/profiles/<%= current_user.id %>"><i class="glyphicon glyphicon-user"></i>
                         <%= current_user.email %>
