@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>yourfit</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a href="/"><h1><strong>your </strong>fit</h1></a>
+          <% if current_user %>
+            <%= link_to "sign out", destroy_user_session_path, :method => :delete %>
+          <% else %>
+            <%= link_to "sign in", new_user_session_path, :method => :new %>
+          <% end %>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+              <!-- if signed in, show full side bar menu, otherwise link to registration -->
+              <% if current_user %>
+                  </li>
+                      <% if current_user %>
+                      <a href="/users/<%= current_user.id %>/profiles/<%= current_user.id %>"><i class="glyphicon glyphicon-user"></i>
+                        <%= current_user.email %>
+                      </a>
+                      <% else %>
+                      <% end %>
+                  </li>
+                  <li>
+                      <!-- List all the templates etc that belong to current_user to show until they sign out -->
+                      <a href="" data-toggle="collapse" data-target="#train"><i class="fa fa-fw fa-bar-chart-o"></i> Train<i class="fa fa-fw fa-caret-down"></i></a>
+                      <ul id="train" class="collapse">
+                          <li>
+                              <a href="/workouts">Workout 1</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <!-- The rest of these on the nav bar don't link to anywhere yet -->
+                  <li>
+                      <a href="javascript:;" data-toggle="collapse" data-target="#nutrition"><i class="glyphicon glyphicon-apple"></i> Nutrition <i class="fa fa-fw fa-caret-down"></i></a>
+                      <ul id="nutrition" class="collapse">
+                          <li>
+                              <a href="">Eat this!</a>
+                          </li>
+                          <li>
+                              <a href="">Do Not Eat!</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="" data-toggle="collapse" data-target="#progress"><i class="glyphicon glyphicon-sort"></i> Progress <i class="fa fa-fw fa-caret-down"></i></a>
+                      <ul id="progress" class="collapse">
+                          <li>
+                              <a href="">Weight</a>
+                          </li>
+                          <li>
+                              <a href="">Body Fat Percentage</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href=""><i class="fa fa-fw fa-file"></i> Inspiration</a>
+                  </li>
+                  <li>
+                      <a href=""><i class="glyphicon glyphicon-hourglass"></i> Timelines</a>
+                  </li>
+              <% else %>
+                  <!-- When user is not signed in, show this -->
+                  <!-- In the future, have more for side bar when not signed in... like what? -->
+                  <li>
+                      <a href="/users/sign_up"><i class="fa fa-play-circle-o"></i> Start Planning!</a>
+                  </li>
+              <% end %>
+                  <!-- Credits, add my Github, once you figure out how to stick it to the bottom of the nav you fool! -->
+                  <p class="creds">
+                    <i class="glyphicon glyphicon-copyright-mark"></i> 2015 Ammie Mcculloch
+                  </p>
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div id="page-wrapper">
+      <div class="container-fluid">
+
+
+        <%= yield %>
+
+      </div>
+    </div>
+    <div id="inspiration">
+      <!-- hard coded 'inspirational' quote -->
+      <p>One reason that people resist change is that they focus on what they have to give up, rather than what they have to gain. - Rick Godwin</p>
+
+      <!-- mother of god, this quotes api only gives me 5 requests... find better api later -->
+      <!-- <% getquote = HTTParty.get('http://api.theysaidso.com/qod.json') %>
+      <p><% getquote %></p>
+      <span style="z-index:50;font-size:0.9em;"><img src="http://theysaidso.com/branding/theysaidso.png" height="20" width="20" alt="theysaidso.com"/><a href="http://theysaidso.com" title="Powered by quotes from theysaidso.com" style="color: #9fcc25; margin-left: 4px; vertical-align: middle;">theysaidso.com</a></span> -->
+    </div>
+
+  </body>
+</html>

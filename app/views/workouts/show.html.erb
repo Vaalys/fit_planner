@@ -1,0 +1,53 @@
+<!-- eventually have a form to use for each workout/nutrition template etc... -->
+
+<div class="col-lg-6">
+  <h2>Workout 1</h2>
+  <div class="table-responsive">
+      <table class="table table-bordered table-hover table-striped">
+          <thead>
+              <tr>
+                <!-- hardcode the table header for now -->
+                  <th> # </th>
+                  <th> Description </th>
+                  <th> Set Count </th>
+                  <th> Reps </th>
+                  <th> Weight </th>
+                  <th> Notes/Comments </th>
+              </tr>
+          </thead>
+          <tbody>
+                <% @workouts.each do |work| %>
+                <tr>
+                  <td>
+                    <%= work.id %>
+                    <br>
+                    <%= link_to ('<i class="glyphicon glyphicon-trash"></i>').html_safe, workout_path(work), :method=> :delete, :remote=> true %>
+                  </td>
+                  <td><%= work.description %></td>
+                  <td><%= work.set_count %></td>
+                  <td><%= work.reps %></td>
+                  <td><%= work.weight %></td>
+                  <td><%= work.notes %></td>
+                </tr>
+                <% end %>
+                <tr>
+                  <div class="col-lg-6">
+                    <div class="input-group">
+                      <%= form_for @workout, url: {action: "create"} do |f| %>
+                      <!-- why won't the added , :class => "btn btn-default" on the submit button work!?-->
+                        <td><%= f.submit "Add", :class => "btn btn-default" %></td>
+                        <td><%= f.text_field :description, :placeholder => "Description", :class => "form-control" %></td>
+                        <td><%= f.text_field :set_count, :placeholder => "Set Count", :class => "form-control" %></td>
+                        <td><%= f.text_field :reps, :placeholder => "Reps", :class => "form-control" %></td>
+                        <td><%= f.text_field :weight, :placeholder => "Weight", :class => "form-control" %></td>
+                        <td><%= f.text_field :notes, :placeholder => "Notes/Comments", :class => "form-control" %></td>
+                      <% end %>
+                    </div>
+                  </div>
+                </tr>
+
+
+          </tbody>
+      </table>
+  </div>
+</div>

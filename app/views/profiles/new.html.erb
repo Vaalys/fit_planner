@@ -1,0 +1,29 @@
+<h2>Make a Profile.</h2>
+
+<p>
+<%= form_for @profile, url: {action: "create"} do |f| %>
+  <%= f.text_field :name, :placeholder => " John Doe" %>
+  <br><br>
+  <%= f.text_field :image_url, :placeholder => " Image URL" %>
+  <br><br>
+  <%= f.text_field :goal, :placeholder => " Overall Goal: Strength!" %>
+  <br><br>
+  <%= f.text_field :weight, :placeholder => " Weight" %>
+  <br><br>
+  <%= f.text_field :height, :placeholder => " Height" %>
+  <br><br>
+  <%= f.text_field :waist_size, :placeholder => " Waist Size" %>
+  <br><br>
+  <%= f.text_field :body_fat_p, :placeholder => " Body Fat Percentage" %>
+  <br><br>
+  <%= f.text_field :bmi, :placeholder => " BMI" %>
+  <br><br>
+  <%= f.text_field :rep_max, :placeholder => " Rep MAX" %>
+  <br><br>
+  <%= f.text_field :fastest_mile, :placeholder => " Fastest Mile" %>
+  <br><br>
+  <%= f.text_field :longest_run, :placeholder => " Longest Run" %>
+  <br><br>
+  <%= f.submit "Create" %>
+<% end %>
+</p>
