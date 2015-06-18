@@ -20,24 +20,18 @@
   margin:0;
   padding:0;
   border:0;
-<<<<<<< HEAD:yourfit/app/assets/stylesheets/application.css
-  /*box-sizing: border-box;*/
-  text-align: center;
 }
 html, body{
   position: relative;
   height: 100%;
   font-size: 18px;
-}
-body{
-=======
-  box-sizing:border-box;
-}
-html, body{
->>>>>>> bootstrap_scratch:app/assets/stylesheets/application.css
   background-color: #E4E6DB;
   text-align: center;
 }
+body{
+  box-sizing:border-box;
+}
+
 h1{
   font-weight: 100;
   font-size: 2.5em;
