@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
-
  */
 
 *{
@@ -48,9 +47,6 @@ h1{
   color: #E4E6DB;
   display: inline-block;
 }
-.home_back{
-
-}
 .home_back img{
   width: 800px;
   height: auto;
@@ -59,21 +55,23 @@ h1{
   left: 225px;
   width: 60%;
 }
+
+#yourpic{
+  max-height: 200px;
+
+}
 .creds{
   bottom: 0;
   height: 100%;
   display: block;
 }
+
 #inspiration{
   float: right;
   width: 225px;
   padding: 10px ;
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   right: 10px;
+  font-size: 14px;
 }
-
-
-/*ul, menu, dir{
-  display: block;
-}*/
