@@ -24,8 +24,12 @@ html, body{
   position: relative;
   height: 100%;
   font-size: 18px;
-  background-color: #E4E6DB;
+  /*background-color: #E4E6DB;*/
+  background-image: url("http://www.wolvertonpool.com/wp-content/uploads/2014/06/runner.jpg");
+  backgound-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
+  color: black;
 }
 body{
   box-sizing:border-box;
@@ -36,7 +40,8 @@ h1{
   font-size: 2.5em;
   margin: 0 20px 10px 20px;
   font-family: 'Aladin', cursive;
-  color: #E4E6DB;
+  /*color: #E4E6DB;*/
+  color: white;
   display: inline-block;
 }
 .navbar-brand{
@@ -54,6 +59,15 @@ h1{
 .col-lg-6{
   left: 225px;
   width: 60%;
+}
+
+h2{
+  font-weight: 80;
+  font-size: 2.5em;
+  font-family: 'Aladin', cursive;
+
+  margin: 40px 20px;
+  color: white;
 }
 
 #yourpic{

@@ -10,7 +10,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
     @workout.user_id = current_user.id
     @workout.save!
-    # binding.pry
+    binding.pry
     redirect_to("/workouts")
   end
 
